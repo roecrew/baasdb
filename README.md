@@ -15,7 +15,7 @@
 ## Example
 
 ```
-npm install bassdb
+npm install bass-db
 ```
 
 
