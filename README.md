@@ -4,11 +4,11 @@
 
 ## Methods
 
-.create('collection-name') ... returns promise resolve() catch(err)
+.create('collection-name', (optional)json) ... returns promise resolve() catch(err)
 
 .fetch('collection-name') ... returns promise resolve(object) catch(err)
 
-.update('collection-name') ... returns promise resolve() catch(err)
+.update('collection-name', json) ... returns promise resolve() catch(err)
 
 .destroy('collection-name') ... returns promise resolve() catch(err)
 
