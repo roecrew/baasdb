@@ -1,6 +1,6 @@
 # baasdb
 <p align="middle"><img src="https://farm8.staticflickr.com/7158/6506504319_26600f4d09_b.jpg">
-<h3 align="middle">A Micro DB</h3>
+<h3 align="middle">A very simple DB that uses JSON</h3>
 
 ## Methods
 
