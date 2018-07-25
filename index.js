@@ -1,7 +1,7 @@
 ﻿function bassdb() {
     this.fs = require('fs');
-    if (!this.fs.existsSync(__dirname + '/bassdb')) {
-        this.fs.mkdirSync(__dirname + '/bassdb');
+    if (!this.fs.existsSync(__dirname + '/baasdb')) {
+        this.fs.mkdirSync(__dirname + '/baasdb');
     }
 }
 
@@ -9,7 +9,7 @@ bassdb.prototype.create = function(collection, json) {
     let fs = this.fs;
     return new Promise(function (resolve, reject) {
         if(!json) {
-            fs.open(__dirname + '/bassdb/' + collection + '.json', 'w', function(err, file) {
+            fs.open(__dirname + '/baasdb/' + collection + '.json', 'w', function(err, file) {
                 if (err) {
                     reject(err);
                 } else {
@@ -17,7 +17,7 @@ bassdb.prototype.create = function(collection, json) {
                 }
             });
         } else {
-            fs.writeFile(__dirname + '/bassdb/' + collection + '.json', JSON.stringify(json), function(err) {
+            fs.writeFile(__dirname + '/baasdb/' + collection + '.json', JSON.stringify(json), function(err) {
                 if (err) {
                     reject(err);
                 } else {
@@ -31,7 +31,7 @@ bassdb.prototype.create = function(collection, json) {
 bassdb.prototype.destroy = function(collection) {
     let fs = this.fs;
     return new Promise(function (resolve, reject) {
-        fs.unlink(__dirname + '/bassdb/' + collection + '.json', function (err) {
+        fs.unlink(__dirname + '/baasdb/' + collection + '.json', function (err) {
             if (err) {
                 reject(err);
             } else {
@@ -44,7 +44,7 @@ bassdb.prototype.destroy = function(collection) {
 bassdb.prototype.fetch = function(collection) {
     let fs = this.fs;
     return new Promise(function (resolve, reject) {
-        fs.readFile(__dirname + '/bassdb/' + collection + '.json', function(err, json) {
+        fs.readFile(__dirname + '/baasdb/' + collection + '.json', function(err, json) {
             if (err) {
                 reject(err);
             } else {
@@ -57,7 +57,7 @@ bassdb.prototype.fetch = function(collection) {
 bassdb.prototype.update = function(collection, json) {
     let fs = this.fs;
     return new Promise(function (resolve, reject) {
-        fs.writeFile(__dirname + '/bassdb/' + collection + '.json', JSON.stringify(json), function(err) {
+        fs.writeFile(__dirname + '/baasdb/' + collection + '.json', JSON.stringify(json), function(err) {
             if (err) {
                 reject(err);
             } else {
