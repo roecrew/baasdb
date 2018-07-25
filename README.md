@@ -21,11 +21,11 @@ npm install baasdb
 
 ```js
 
-const bassdb = require('baasdb');
+const baasdb = require('baasdb');
 
-bassdb.create('items');
-bassdb.update('items', {a: 1, b: "two", c: [1, 2, 3]});
-bassdb.fetch('items').then((obj) => { console.log(obj); });
-bassdb.destroy('items');
+baasdb.create('items');
+baasdb.update('items', {a: 1, b: "two", c: [1, 2, 3]});
+baasdb.fetch('items').then((obj) => { console.log(obj); });
+baasdb.destroy('items');
 
 ```
