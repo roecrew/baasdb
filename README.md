@@ -14,7 +14,14 @@
 
 ## Example
 
+```
+npm install bassdb
+```
+
+
 ```js
+
+const bassdb = require('bassdb');
 
 bassdb.create('items');
 bassdb.update('items', {a: 1, b: "two", c: [1, 2, 3]});
