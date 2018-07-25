@@ -1,4 +1,4 @@
-# bassdb
+# baasdb
 <p align="middle"><img src="https://farm8.staticflickr.com/7158/6506504319_26600f4d09_b.jpg">
 <h3 align="middle">A Micro DB</h3>
 
@@ -15,13 +15,13 @@
 ## Example
 
 ```
-npm install bass-db
+npm install baasdb
 ```
 
 
 ```js
 
-const bassdb = require('bassdb');
+const bassdb = require('baasdb');
 
 bassdb.create('items');
 bassdb.update('items', {a: 1, b: "two", c: [1, 2, 3]});
